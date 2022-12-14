@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Zen Dots', cursive;
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    margin-bottom: 1rem;
+}
+
+.panels{
+    width: 80%;
+    min-height: 70vh;
+    overflow: hidden;
+    display: flex;
+    border-radius: 20px;
+}
+
+.panel{
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    font-size: 2rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transition:flex 0.7s cubic-bezier(0.61,-0.19,0.7,-0.11);
+}
+
+.panel>*{
+    width: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 2s;
+}
+
+.panel>*:first-child{
+    transform: translateY(-300px);
+}
+.panel>*:last-child{
+    transform: translateY(300px);
+}
+.panel.open-active>*:first-child{
+    transform: translateY(0);
+}
+.panel.open-active>*:last-child{
+    transform: translateY(0);
+}
+.panel.open{
+    font-size: 4rem;
+    flex: 2.5;
+}
+.panel p:nth-child(2){
+    font-size: 2.5rem;
+    font-weight: bold;
+}
